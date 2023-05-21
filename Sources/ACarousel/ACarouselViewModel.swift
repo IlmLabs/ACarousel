@@ -134,6 +134,10 @@ extension ACarouselViewModel {
         return _spacing
     }
     
+    var timeInterval: TimeInterval {
+        return _autoScroll.interval
+    }
+    
     var offsetAnimation: Animation? {
         guard isWrap else {
             return .spring()
@@ -297,7 +301,6 @@ extension ACarouselViewModel {
         /// increments of one and compare to the scrolling duration
         /// return when timing less than duration
         activeTiming()
-        timing += 1
         if timing < autoScroll.interval {
             return
         }

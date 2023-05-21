@@ -1,13 +1,11 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "ACarousel",
     platforms: [
-        .iOS(.v13),
-        .macOS(.v10_15),
-        .tvOS(.v11)
+        .iOS(.v14)
     ],
     products: [
         .library(
